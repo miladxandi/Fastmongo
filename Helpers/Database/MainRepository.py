@@ -30,7 +30,7 @@ class MainRepository:
 
     def find_by_id(self, id):
         try:
-            return self.parse_json(self.table.find({"_id": ObjectId(id)}))
+            return self.parse_json(self.table.find({"_id": ObjectId(id)}))[0]
         except:
             return None
 

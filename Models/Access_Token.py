@@ -1,11 +1,9 @@
 from datetime import datetime
 
 from pydantic import BaseModel
-from pyparsing import Optional
+from Helpers.Features.Classes import objectid
 
 
 class AccessToken(BaseModel):
     access_token: str
-    user_id: str
-    createdAt: Optional[datetime]
-    updatedAt: Optional[datetime]
+    user_id: objectid
